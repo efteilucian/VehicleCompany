@@ -12,4 +12,6 @@ public class Truck extends Vehicle{
 	public double calculateRoadTAX() {
 		return price *0.05;
 	}
+
+	
 }

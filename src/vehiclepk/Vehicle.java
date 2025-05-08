@@ -1,6 +1,6 @@
 package vehiclepk;
 
-public abstract class Vehicle implements CalculationTaxes{
+public abstract class Vehicle implements CalculationTaxes,Comparable<Vehicle>{
 	protected double price;
 	private String manufacturer;
 	private String country;
@@ -24,6 +24,16 @@ public abstract class Vehicle implements CalculationTaxes{
 	
 		return 0;
 		
+	}
+	
+	@Override
+	public int compareTo(Vehicle v) {
+		
+		double t1 =this.calculateTotal();
+		double t2 =v.calculateTotal();
+		if(t1>t2) return -1;
+		else if(t1<t2) return 1;
+		return (int) (this.price - v.price);
 	}
 	
 	

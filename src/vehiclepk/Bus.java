@@ -10,4 +10,6 @@ public class Bus extends Vehicle{
 	public double calculateRoadTAX() {
 		return price *0.04;
 	}
+
+	
 }
